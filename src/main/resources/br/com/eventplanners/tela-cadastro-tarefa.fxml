@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaCadastroTarefa">
+    <children>
+        <ImageView fitHeight="647.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../imagens/fundoTelaInicial.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="222.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRAR TAREFA" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Text>
+        <Button fx:id="btnSalvarNovaTarefa" layoutX="462.0" layoutY="475.0" mnemonicParsing="false" onAction="#salvarTarefa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+        <TextField fx:id="cadastrarTarefa" layoutX="242.0" layoutY="213.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite a tarefa..." />
+        <TextField fx:id="cadastrarValorTarefa" layoutX="242.0" layoutY="318.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o valor..." />
+        <Button fx:id="btnVoltarTelaListaTarefa" layoutX="163.0" layoutY="475.0" mnemonicParsing="false" onAction="#voltarTelaListaTarefa" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #29abe2;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+      <Text fill="WHITE" layoutX="100.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarefa" textAlignment="CENTER" wrappingWidth="127.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="100.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor" textAlignment="CENTER" wrappingWidth="127.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
