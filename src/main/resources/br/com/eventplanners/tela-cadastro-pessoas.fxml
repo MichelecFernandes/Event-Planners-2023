@@ -6,64 +6,147 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaCadastroPessoa">
     <children>
-        <ImageView fitHeight="667.0" fitWidth="848.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="752.0" fitWidth="967.0" layoutX="-16.0" layoutY="-533.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../imagens/fundoTelaInicial.png" />
+                <Image url="@../../../imagens/bordas-telas-horizontal.jpeg" />
             </image>
         </ImageView>
-        <Text fill="WHITE" layoutX="219.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRAR PESSOA" textAlignment="CENTER" wrappingWidth="410.3984375">
+        <ImageView fitHeight="113.0" fitWidth="147.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../imagens/icone-event-planners.jpeg" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="262.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRAR PESSOA" textAlignment="CENTER" wrappingWidth="410.3984375">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>
         </Text>
         <ButtonBar layoutX="42.0" layoutY="514.0" prefHeight="40.0" prefWidth="43.0" />
-        <Button fx:id="salvarNovaPessoa" layoutX="520.0" layoutY="452.0" mnemonicParsing="false" onAction="#salvarPessoa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
+        <Button fx:id="salvarNovaPessoa" layoutX="580.0" layoutY="452.0" mnemonicParsing="false" onAction="#salvarPessoa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
       <TextField fx:id="cadastrarNomePessoa" layoutX="230.0" layoutY="164.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o Nome..." />
       <TextField fx:id="cadastrarCpfPessoa" layoutX="230.0" layoutY="214.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o CPF..." />
-        <Button layoutX="247.0" layoutY="452.0" mnemonicParsing="false" onAction="#voltarTelaCadastroPessoa" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #29abe2;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+        <Button layoutX="230.0" layoutY="452.0" mnemonicParsing="false" onAction="#voltarTelaCadastroPessoa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-      <ImageView fitHeight="98.0" fitWidth="96.0" layoutX="38.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../imagens/crogongrama-sem-fundo.png" />
-         </image>
-      </ImageView>
       <TextField fx:id="cadastrarContatoPessoa" layoutX="230.0" layoutY="264.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o contato..." />
-      <Text fill="WHITE" layoutX="70.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-blend-mode: #29abe2;" text="Nome" textAlignment="CENTER" wrappingWidth="177.3984375">
+      <Text layoutX="128.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-blend-mode: #29abe2;" text="Nome" textAlignment="CENTER" wrappingWidth="60.3984375">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="70.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="177.3984375">
+      <Text layoutX="128.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="43.0">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="70.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contato" textAlignment="CENTER" wrappingWidth="177.3984375">
+      <Text layoutX="120.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contato" textAlignment="CENTER" wrappingWidth="75.3984375">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="70.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="177.3984375">
+      <Text layoutX="128.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="60.3984375">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="70.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="177.3984375">
+      <Text layoutX="125.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="66.3984375">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
       <TextField fx:id="cadastrarLoginPessoa" layoutX="230.0" layoutY="314.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o login..." />
       <TextField fx:id="cadastrarSenhaPessoa" layoutX="230.0" layoutY="365.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite a senha do login..." />

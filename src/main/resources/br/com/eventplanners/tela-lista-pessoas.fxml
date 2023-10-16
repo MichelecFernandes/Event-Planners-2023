@@ -12,12 +12,17 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaListaPessoa">
     <children>
-        <ImageView fitHeight="647.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="752.0" fitWidth="967.0" layoutX="-16.0" layoutY="-533.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../imagens/fundo-tela-inicial.jpeg" />
+                <Image url="@../../../imagens/bordas-telas-horizontal.jpeg" />
             </image>
         </ImageView>
-        <TableView fx:id="tabelaPessoas" layoutX="43.0" layoutY="282.0" prefHeight="187.0" prefWidth="717.0">
+        <ImageView fitHeight="113.0" fitWidth="147.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../imagens/icone-event-planners.jpeg" />
+            </image>
+        </ImageView>
+        <TableView fx:id="tabelaPessoas" layoutX="117.0" layoutY="281.0" prefHeight="187.0" prefWidth="717.0">
             <columns>
                 <TableColumn fx:id="idPessoa" minWidth="0.0" prefWidth="79.0" text="ID" />
                 <TableColumn fx:id="nomePessoa" minWidth="0.0" prefWidth="154.0" text="NOME" />
@@ -27,28 +32,28 @@
                 <TableColumn fx:id="senhaPessoa" minWidth="0.0" prefWidth="117.0" text="SENHA" />
             </columns>
         </TableView>
-        <Text fill="WHITE" layoutX="243.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA DE PESSOAS" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="309.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA DE PESSOAS" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>
         </Text>
         <ButtonBar layoutX="42.0" layoutY="514.0" prefHeight="40.0" prefWidth="43.0" />
-        <Button layoutX="43.0" layoutY="194.0" mnemonicParsing="false" onAction="#cadastrarPessoa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
+        <Button layoutX="117.0" layoutY="194.0" mnemonicParsing="false" onAction="#cadastrarPessoa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <Button layoutX="344.0" layoutY="494.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+        <Button layoutX="419.0" layoutY="494.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-      <Button disable="true" layoutX="344.0" layoutY="194.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+      <Button disable="true" layoutX="419.0" layoutY="194.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Editar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button disable="true" layoutX="647.0" layoutY="194.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
+      <Button disable="true" layoutX="721.0" layoutY="194.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

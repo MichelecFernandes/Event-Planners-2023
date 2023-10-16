@@ -6,60 +6,148 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaCadastroCronograma">
     <children>
-        <ImageView fitHeight="647.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="752.0" fitWidth="967.0" layoutX="-16.0" layoutY="-533.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../imagens/fundoTelaInicial.png" />
+                <Image url="@../../../imagens/bordas-telas-horizontal.jpeg" />
             </image>
         </ImageView>
-        <Text fill="WHITE" layoutX="103.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRAMENTO CRONOGRAMA" textAlignment="CENTER">
+        <ImageView fitHeight="113.0" fitWidth="147.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../imagens/icone-event-planners.jpeg" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutX="222.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRAR CRONOGRAMA" textAlignment="CENTER" wrappingWidth="593.279296875">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>
         </Text>
-        <Button fx:id="salvarNovoCronograna" layoutX="462.0" layoutY="475.0" mnemonicParsing="false" onAction="#salvarNovaListaCronograma" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
+        <Button fx:id="salvarNovoCronograna" layoutX="707.0" layoutY="466.0" mnemonicParsing="false" onAction="#salvarNovaListaCronograma" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <TextField fx:id="cadastrarDataCronograma" layoutX="299.0" layoutY="191.0" prefHeight="30.0" prefWidth="294.0" promptText="Digite a Data..." />
-        <Button fx:id="btnVoltarTelaListaCronograma" layoutX="163.0" layoutY="475.0" mnemonicParsing="false" onAction="#voltarTelaListaCronograma" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #29abe2;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+        <TextField fx:id="cadastrarDataCronograma" layoutX="235.0" layoutY="206.0" prefHeight="30.0" prefWidth="171.0" promptText="Digite a Data..." />
+        <Button fx:id="btnVoltarTelaListaCronograma" layoutX="235.0" layoutY="466.0" mnemonicParsing="false" onAction="#voltarTelaListaCronograma" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-      <TextField fx:id="cadastrarHorarioEntrada" layoutX="296.0" layoutY="305.0" prefHeight="30.0" prefWidth="171.0" promptText="Digite o Horário de Entrada.." />
-      <ComboBox fx:id="comboBoxPessoa" layoutX="299.0" layoutY="248.0" prefHeight="25.0" prefWidth="149.0" />
-      <ComboBox fx:id="comboBoxTarefa" layoutX="296.0" layoutY="413.0" prefHeight="25.0" prefWidth="149.0" />
-      <TextField fx:id="cadastrarHorarioSaida" layoutX="296.0" layoutY="356.0" prefHeight="30.0" prefWidth="171.0" promptText="Digite o Horário de Saída.." />
-      <Text fill="WHITE" layoutX="169.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" textAlignment="CENTER" wrappingWidth="84.294921875">
+      <TextField fx:id="cadastrarHorarioEntrada" layoutX="235.0" layoutY="367.0" prefHeight="30.0" prefWidth="171.0" promptText="Digite o Horário de Entrada.." />
+      <ComboBox fx:id="comboBoxPessoa" layoutX="235.0" layoutY="288.0" prefHeight="25.0" prefWidth="171.0" />
+      <ComboBox fx:id="comboBoxTarefa" layoutX="650.0" layoutY="288.0" prefHeight="25.0" prefWidth="171.0" />
+      <TextField fx:id="cadastrarHorarioSaida" layoutX="650.0" layoutY="366.0" prefHeight="30.0" prefWidth="171.0" promptText="Digite o Horário de Saída.." />
+      <Text layoutX="137.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" textAlignment="CENTER" wrappingWidth="84.294921875">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="169.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pessoa" textAlignment="CENTER" wrappingWidth="84.294921875">
+      <Text layoutX="137.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pessoa" textAlignment="CENTER" wrappingWidth="84.294921875">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="170.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarefa" textAlignment="CENTER" wrappingWidth="84.294921875">
+      <Text layoutX="532.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarefa" textAlignment="CENTER" wrappingWidth="84.294921875">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="70.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horário de Entrada" textAlignment="CENTER" wrappingWidth="199.0">
+      <Text layoutX="27.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horário de Entrada" textAlignment="CENTER" wrappingWidth="199.0">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="84.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horário de Saída" textAlignment="CENTER" wrappingWidth="171.0">
+      <Text layoutX="446.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horário de Saída" textAlignment="CENTER" wrappingWidth="171.0">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
     </children>
 </AnchorPane>
