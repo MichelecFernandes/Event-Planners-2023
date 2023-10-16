@@ -4,40 +4,69 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: src/main/resources/imagens/moeda.png;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaPrincipalAdmin">
    <children>
-      <ImageView fitHeight="609.0" fitWidth="892.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="674.0" fitWidth="468.0" layoutX="-290.0" layoutY="-49.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../imagens/fundo-tela-inicial.jpeg" />
+            <Image url="@../../../imagens/bordas-telas.jpeg" />
          </image>
       </ImageView>
-      <Button fx:id="btnCronograma" layoutX="288.0" layoutY="236.0" mnemonicParsing="false" onAction="#cronogramaOrganizador" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="CRONOGRAMA" textAlignment="CENTER">
+      <Button fx:id="btnCronograma" layoutX="14.0" layoutY="214.0" mnemonicParsing="false" onAction="#cronogramaOrganizador" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="CRONOGRAMA" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="845.0" layoutY="572.0" mnemonicParsing="false" onAction="#sair" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="SAIR" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="353.0" layoutY="440.0" mnemonicParsing="false" onAction="#sair" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #29abe2; -fx-background-radius: 10;" text="SAIR" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnCredenciamento" layoutX="14.0" layoutY="329.0" mnemonicParsing="false" onAction="#controladorCredenciamento" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="CREDENCIAMENTO" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="11.0" />
          </font>
       </Button>
-      <Button fx:id="btnCredenciamento" layoutX="288.0" layoutY="288.0" mnemonicParsing="false" onAction="#controladorCredenciamento" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="CREDENCIAMENTO" textAlignment="CENTER">
+      <Button fx:id="btnTarefa" layoutX="14.0" layoutY="466.0" mnemonicParsing="false" onAction="#controladorTarefa" prefHeight="39.0" prefWidth="125.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="TAREFA" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="11.0" />
          </font>
       </Button>
-      <Button fx:id="btnTarefa" layoutX="288.0" layoutY="343.0" mnemonicParsing="false" onAction="#controladorTarefa" prefHeight="39.0" prefWidth="236.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="TAREFA" textAlignment="CENTER">
+      <Text fontSmoothingType="LCD" layoutX="430.0" layoutY="170.0" pickOnBounds="true" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Comic Sans MS Italic" size="34.0" />
          </font>
-      </Button>
-      <Text fill="WHITE" layoutX="251.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU DE OPÇÕES" textAlignment="CENTER">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
+         <fill>
+            <RadialGradient centerX="0.505524861878453" centerY="0.3151658767772512" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
+      <ImageView fitHeight="780.0" fitWidth="967.0" layoutX="10.0" layoutY="-557.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/bordas-telas-horizontal.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="126.0" fitWidth="169.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/icone-event-planners.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
