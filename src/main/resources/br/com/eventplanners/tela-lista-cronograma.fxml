@@ -12,58 +12,53 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaListaCronograma">
    <children>
-      <ImageView fitHeight="752.0" fitWidth="967.0" layoutX="-16.0" layoutY="-533.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="647.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../imagens/bordas-telas-horizontal.jpeg" />
+            <Image url="@../../../imagens/fundo-tela-inicial.jpeg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="113.0" fitWidth="147.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../imagens/icone-event-planners.jpeg" />
-         </image>
-      </ImageView>
-      <TableView fx:id="tabelaCronograma" layoutX="97.0" layoutY="205.0" prefHeight="309.0" prefWidth="742.0">
+      <TableView fx:id="tabelaCronograma" layoutX="112.0" layoutY="181.0" prefHeight="295.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="dataCronograma" prefWidth="75.0" text="DATA" />
-            <TableColumn fx:id="pessoaCronograma" prefWidth="153.0" text="PESSOA" />
-            <TableColumn fx:id="tarefaCronograma" minWidth="0.0" prefWidth="117.0" text="TAREFA" />
-            <TableColumn fx:id="inicioCronograma" minWidth="0.0" prefWidth="109.0" text="INÍCIO" />
-            <TableColumn fx:id="terminoCronograma" minWidth="0.0" prefWidth="101.0" text="TÉRMINO" />
-            <TableColumn fx:id="statusTarefa" minWidth="0.0" prefWidth="186.0" text="STATUS DA TAREFA" />
+            <TableColumn fx:id="pessoaCronograma" prefWidth="104.0" text="PESSOA" />
+            <TableColumn fx:id="tarefaCronograma" minWidth="0.0" prefWidth="75.0" text="TAREFA" />
+            <TableColumn fx:id="inicioCronograma" minWidth="0.0" prefWidth="90.0" text="INÍCIO" />
+            <TableColumn fx:id="terminoCronograma" minWidth="0.0" prefWidth="90.0" text="TÉRMINO" />
+            <TableColumn fx:id="statusTarefa" minWidth="0.0" prefWidth="165.0" text="STATUS DA TAREFA" />
         </columns>
       </TableView>
-      <Text fill="WHITE" layoutX="283.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA CRONOGRAMA" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="215.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA CRONOGRAMA" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Text>
       <ButtonBar layoutX="42.0" layoutY="514.0" prefHeight="40.0" prefWidth="43.0" />
-      <Button fx:id="btnEditarCronograma" disable="true" layoutX="412.0" layoutY="124.0" mnemonicParsing="false" onAction="#editarCronograma" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnEditarCronograma" disable="true" layoutX="355.0" layoutY="132.0" mnemonicParsing="false" onAction="#cadastrarCronograma" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Editar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="97.0" layoutY="534.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="114.0" layoutY="534.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnCadastrarCronograma" disable="true" layoutX="97.0" layoutY="124.0" mnemonicParsing="false" onAction="#cadastrarCronograma" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="+ Cadastrar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnCadastrarCronograma" disable="true" layoutX="114.0" layoutY="132.0" mnemonicParsing="false" onAction="#cadastrarCronograma" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnExcluirCronograma" disable="true" layoutX="726.0" layoutY="124.0" mnemonicParsing="false" onAction="#excluirCronograma" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="x Excluir" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnExcluirCronograma" disable="true" layoutX="596.0" layoutY="132.0" mnemonicParsing="false" onAction="#excluirCronograma" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnFinalizarTarefa" disable="true" layoutX="726.0" layoutY="534.0" mnemonicParsing="false" onAction="#finalizarTarefa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Finalizar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnFinalizarTarefa" disable="true" layoutX="596.0" layoutY="534.0" mnemonicParsing="false" onAction="#finalizarTarefa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Finalizar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnIniciarTarefa" disable="true" layoutX="422.0" layoutY="534.0" mnemonicParsing="false" onAction="#iniciarTarefa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Iniciar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnIniciarTarefa" disable="true" layoutX="355.0" layoutY="534.0" mnemonicParsing="false" onAction="#iniciarTarefa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Iniciar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

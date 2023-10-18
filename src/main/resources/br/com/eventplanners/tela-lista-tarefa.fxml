@@ -11,42 +11,37 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaListaTarefa">
     <children>
-        <ImageView fitHeight="752.0" fitWidth="967.0" layoutX="-16.0" layoutY="-533.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="647.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../imagens/bordas-telas-horizontal.jpeg" />
+                <Image url="@../../../imagens/fundo-tela-inicial.jpeg" />
             </image>
         </ImageView>
-        <ImageView fitHeight="113.0" fitWidth="147.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../imagens/icone-event-planners.jpeg" />
-            </image>
-        </ImageView>
-        <Text fill="WHITE" layoutX="356.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA TAREFA" textAlignment="CENTER">
+        <Text fill="WHITE" layoutX="280.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA TAREFA" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>
         </Text>
-        <Button fx:id="btnVoltarTelaPrincipal" layoutX="420.0" layoutY="496.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+        <Button layoutX="352.0" layoutY="506.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #29abe2;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-      <Button fx:id="btnCadastrarNovaTarefa" layoutX="154.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarNovaTarefa" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="99.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarNovaTarefa" prefHeight="39.0" prefWidth="126.0" style="-fx-background-color: #29abe2;" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnEditarTarefa" disable="true" layoutX="420.0" layoutY="206.0" mnemonicParsing="false" onAction="#editarTarefa" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+      <Button disable="true" layoutX="359.0" layoutY="206.0" mnemonicParsing="false" onAction="#editarTarefa" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #29abe2;" text="Editar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnExcluirTarefa" disable="true" layoutX="655.0" layoutY="206.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
+      <Button disable="true" layoutX="606.0" layoutY="200.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #29abe2;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tabelaTarefas" layoutX="154.0" layoutY="282.0" prefHeight="200.0" prefWidth="603.0">
+      <TableView fx:id="tabelaTarefas" layoutX="99.0" layoutY="283.0" prefHeight="200.0" prefWidth="603.0">
         <columns>
           <TableColumn fx:id="idTarefa" prefWidth="189.0" text="ID" />
           <TableColumn fx:id="nomeTarefa" prefWidth="216.0" text="TAREFA" />
