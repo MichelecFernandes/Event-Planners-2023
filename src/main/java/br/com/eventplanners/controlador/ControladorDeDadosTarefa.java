@@ -1,6 +1,9 @@
 package br.com.eventplanners.controlador;
 
+import br.com.eventplanners.cadastros.Cronograma;
+import br.com.eventplanners.cadastros.Pessoa;
 import br.com.eventplanners.cadastros.Tarefa;
+import br.com.eventplanners.manipulacaoArquivo.ControladorArquivoPessoa;
 import br.com.eventplanners.manipulacaoArquivo.ControladorArquivoTarefa;
 
 import java.io.FileOutputStream;
@@ -12,6 +15,8 @@ import java.util.List;
 public class ControladorDeDadosTarefa {
 
     private String nomeArquivo = "tarefas.dat"; // Nome do arquivo para armazenar as tarefas
+
+    private final ControladorArquivoTarefa controladorArquivoTarefa = new ControladorArquivoTarefa();
 
     public ArrayList<Tarefa> listarTarefas(){
         ControladorArquivoTarefa controladorArquivoTarefa = new ControladorArquivoTarefa();
@@ -33,4 +38,41 @@ public class ControladorDeDadosTarefa {
             throw e; // Re-lança a exceção para ser tratada por quem chamou o método
         }
     }
+
+    public boolean atualizarTarefa(Tarefa tarefa){
+        ArrayList<Tarefa> tarefas = controladorArquivoTarefa.lerArquivoTarefas();
+
+        int index = -1;
+        for(Tarefa tarefaEntity : tarefas){
+            if(tarefaEntity.getIdTarefa() == tarefa.getIdTarefa()){
+                index = tarefas.indexOf(tarefaEntity);
+                break;
+            }
+        }
+
+        if(index == -1) return false;
+
+        tarefas.add(index, tarefa);
+        tarefas.remove(index+1);
+        controladorArquivoTarefa.atualizarListaDeTarefas(tarefas);
+        return true;
+    }
+
+    public boolean excluirTarefa(Tarefa tarefa){
+        ArrayList<Tarefa> tarefas = ControladorArquivoTarefa.lerArquivoTarefas();
+
+        int index = -1;
+        for(Tarefa tarefaEntity : tarefas){
+            if(tarefaEntity.getIdTarefa() == tarefa.getIdTarefa()){
+                index = tarefas.indexOf(tarefaEntity);
+                break;
+            }
+        }
+
+        if(index == -1) return false;
+        tarefas.remove(index);
+        controladorArquivoTarefa.atualizarListaDeTarefas(tarefas);
+        return true;
+    }
+
 }

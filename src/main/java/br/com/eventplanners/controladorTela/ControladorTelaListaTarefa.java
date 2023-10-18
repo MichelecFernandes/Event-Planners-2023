@@ -3,10 +3,12 @@ package br.com.eventplanners.controladorTela;
 import br.com.eventplanners.cadastros.Tarefa;
 import br.com.eventplanners.controlador.ControladorDeCena;
 import br.com.eventplanners.controlador.ControladorDeDadosTarefa;
+import br.com.eventplanners.controlador.ControladorLogin;
 import br.com.eventplanners.manipulacaoArquivo.ControladorArquivoTarefa;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -30,6 +32,17 @@ public class ControladorTelaListaTarefa {
     @FXML
     TableColumn<Tarefa, Double> valorTarefa;
 
+    @FXML
+    private Button btnCadastrarNovaTarefa;
+
+    @FXML
+    private Button btnEditarTarefa;
+
+    @FXML
+    private Button btnExcluirTarefa;
+
+    private Tarefa tarefaSelecionada;
+
     ArrayList<Tarefa> tarefas = ControladorArquivoTarefa.lerArquivoTarefas();
     ObservableList<Tarefa> pessoaObservableList;
 
@@ -44,6 +57,24 @@ public class ControladorTelaListaTarefa {
 
         pessoaObservableList = FXCollections.observableArrayList(tarefas);
         tabelaTarefas.setItems(pessoaObservableList);
+
+        tabelaTarefas.getSelectionModel().selectedItemProperty().addListener((observableValue, oldTarfea, newTarefa) -> {
+
+            if(newTarefa == null) {
+                btnEditarTarefa.setDisable((true));
+                btnExcluirTarefa.setDisable(true);
+                tabelaTarefas.getSelectionModel().clearSelection();
+                return;
+            }
+
+            tarefaSelecionada = newTarefa;
+            btnEditarTarefa.setDisable(false);
+            btnExcluirTarefa.setDisable(false);
+
+        });
+
+        tarefaSelecionada = null;
+
     }
 
     @FXML
@@ -70,6 +101,14 @@ public class ControladorTelaListaTarefa {
     @FXML
     protected void voltarTelaListaTarefa() throws IOException {
         System.out.println("Voltar Tela");
+        ControladorDeCena.trocarCena("tela-lista-tarefa.fxml");
+    }
+
+
+
+    @FXML
+    protected void controladorTarefa() throws IOException {
+        System.out.println("Listando Tarefas");
         ControladorDeCena.trocarCena("tela-lista-tarefa.fxml");
     }
 }

@@ -38,22 +38,22 @@
             </font>
         </Text>
         <ButtonBar layoutX="42.0" layoutY="514.0" prefHeight="40.0" prefWidth="43.0" />
-        <Button layoutX="117.0" layoutY="194.0" mnemonicParsing="false" onAction="#cadastrarPessoa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
+        <Button fx:id="btnCadastrarPessoa" layoutX="117.0" layoutY="194.0" mnemonicParsing="false" onAction="#cadastrarPessoa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <Button layoutX="419.0" layoutY="494.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+        <Button fx:id="btnVoltarTelaCronogramaOrganizador" layoutX="419.0" layoutY="494.0" mnemonicParsing="false" onAction="#voltarTelaCronogramaOrganizador" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-      <Button disable="true" layoutX="419.0" layoutY="194.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="bntEditarPessoa" disable="true" layoutX="419.0" layoutY="194.0" mnemonicParsing="false" onAction="#editarPessoa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Editar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button disable="true" layoutX="721.0" layoutY="194.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnExcluirPessoa" disable="true" layoutX="721.0" layoutY="194.0" mnemonicParsing="false" onAction="#excluirPessoa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

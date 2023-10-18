@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 public class ControladorDeDadosPessoa {
 
+    ControladorArquivoPessoa controladorArquivoPessoa = new ControladorArquivoPessoa();
+
     public ArrayList<Pessoa> listarPessoas(){
         ControladorArquivoPessoa controladorArquivoPessoa = new ControladorArquivoPessoa();
         return controladorArquivoPessoa.lerArquivoPessoas();
@@ -40,7 +42,6 @@ public class ControladorDeDadosPessoa {
     }
 
     public boolean excluirPessoa(Pessoa pessoa){
-        ControladorArquivoPessoa controladorArquivoPessoa = new ControladorArquivoPessoa();
         ArrayList<Pessoa> pessoas = ControladorArquivoPessoa.lerArquivoPessoas();
 
         int index = -1;

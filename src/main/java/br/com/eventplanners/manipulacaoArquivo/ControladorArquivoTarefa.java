@@ -1,5 +1,6 @@
 package br.com.eventplanners.manipulacaoArquivo;
 
+import br.com.eventplanners.cadastros.Cronograma;
 import br.com.eventplanners.cadastros.Tarefa;
 
 import java.io.*;
@@ -11,6 +12,10 @@ public class ControladorArquivoTarefa {
     public void cadastrarTarefaNoArquivo(Tarefa tarefa){
         ArrayList<Tarefa> tarefas = this.lerArquivoTarefas();
         tarefas.add(tarefa);
+        this.salvarArquivoTarefas(tarefas);
+    }
+
+    public void atualizarListaDeTarefas(ArrayList<Tarefa> tarefas){
         this.salvarArquivoTarefas(tarefas);
     }
 

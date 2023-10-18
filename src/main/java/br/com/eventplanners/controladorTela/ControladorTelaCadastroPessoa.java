@@ -53,7 +53,6 @@ public class ControladorTelaCadastroPessoa {
                 throw new RuntimeException(e);
             }
         });
-
     }
 
     @FXML

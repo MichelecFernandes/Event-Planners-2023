@@ -12,32 +12,32 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaCadastroPessoa">
+<AnchorPane prefHeight="612.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaEditarPessoas">
     <children>
       <ImageView fitHeight="105.0" fitWidth="841.0" layoutY="-1.0">
          <image>
             <Image url="@../../../imagens/cabecalho-tela.jpeg" />
          </image>
       </ImageView>
-        <Text fill="WHITE" layoutX="254.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRAR PESSOA" textAlignment="CENTER" wrappingWidth="410.3984375">
+        <Text fill="WHITE" layoutX="254.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDITAR DADOS PESSOA" textAlignment="CENTER" wrappingWidth="410.3984375">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>
         </Text>
         <ButtonBar layoutX="42.0" layoutY="514.0" prefHeight="40.0" prefWidth="43.0" />
-        <Button fx:id="salvarNovaPessoa" layoutX="580.0" layoutY="452.0" mnemonicParsing="false" onAction="#salvarPessoa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
+        <Button fx:id="salvarEdicaoPessoa" layoutX="580.0" layoutY="452.0" mnemonicParsing="false" onAction="#salvarEdicaoPessoa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-      <TextField fx:id="cadastrarNomePessoa" layoutX="230.0" layoutY="164.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o Nome..." />
-      <TextField fx:id="cadastrarCpfPessoa" layoutX="230.0" layoutY="214.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o CPF..." />
-        <Button layoutX="230.0" layoutY="452.0" mnemonicParsing="false" onAction="#voltarTelaCadastroPessoa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+      <TextField fx:id="editarNomePessoa" layoutX="230.0" layoutY="164.0" prefHeight="40.0" prefWidth="458.0" />
+      <TextField fx:id="editarCpfPessoa" layoutX="230.0" layoutY="214.0" prefHeight="40.0" prefWidth="458.0" />
+        <Button layoutX="230.0" layoutY="452.0" mnemonicParsing="false" onAction="#voltarTelaListaPessoa" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-      <TextField fx:id="cadastrarContatoPessoa" layoutX="230.0" layoutY="264.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o contato..." />
+      <TextField fx:id="editarContatoPessoa" layoutX="230.0" layoutY="264.0" prefHeight="40.0" prefWidth="458.0" />
       <Text layoutX="128.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-blend-mode: #29abe2;" text="Nome" textAlignment="CENTER" wrappingWidth="60.3984375">
          <font>
             <Font name="System Bold" size="19.0" />
@@ -143,7 +143,7 @@
             </RadialGradient>
          </fill>
       </Text>
-      <TextField fx:id="cadastrarLoginPessoa" layoutX="230.0" layoutY="314.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite o login..." />
-      <TextField fx:id="cadastrarSenhaPessoa" layoutX="230.0" layoutY="365.0" prefHeight="40.0" prefWidth="458.0" promptText="Digite a senha do login..." />
+      <TextField fx:id="editarLoginPessoa" layoutX="230.0" layoutY="314.0" prefHeight="40.0" prefWidth="458.0" />
+      <TextField fx:id="editarSenhaPessoa" layoutX="230.0" layoutY="365.0" prefHeight="40.0" prefWidth="458.0" />
     </children>
 </AnchorPane>

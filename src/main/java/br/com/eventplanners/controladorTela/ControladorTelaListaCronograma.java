@@ -155,6 +155,15 @@ public class ControladorTelaListaCronograma {
         ControladorDeCena.trocarCena("tela-cadastro-cronograma.fxml");
     }
 
+
+    @FXML
+    protected void editarCronograma() throws IOException {
+        System.out.println("abrindo tela de edição Cronograma");
+
+        ControladorTelaEditarCronograma.cronograma = cronogramaSelecionado;
+        ControladorDeCena.trocarCena("tela-editar-cronograma.fxml");
+    }
+
     @FXML
     protected void excluirCronograma() throws IOException {
         ControladorDeDadosCronogramaPessoas controladorDeDadosCronogramaPessoas = new ControladorDeDadosCronogramaPessoas();

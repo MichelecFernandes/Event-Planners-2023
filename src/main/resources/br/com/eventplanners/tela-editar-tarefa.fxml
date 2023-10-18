@@ -5,42 +5,99 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaCadastroTarefa">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.eventplanners.controladorTela.ControladorTelaEditarTarefa">
     <children>
-        <ImageView fitHeight="647.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="752.0" fitWidth="967.0" layoutX="-16.0" layoutY="-533.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../imagens/fundoTelaInicial.png" />
+                <Image url="@../../../imagens/bordas-telas-horizontal.jpeg" />
             </image>
         </ImageView>
-        <Text fill="WHITE" layoutX="265.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDITAR TAREFA" textAlignment="CENTER">
+        <ImageView fitHeight="113.0" fitWidth="147.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../imagens/icone-event-planners.jpeg" />
+            </image>
+        </ImageView>
+       <Text fill="WHITE" layoutX="340.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDITAR TAREFA" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="36.0" />
             </font>
         </Text>
-        <Button fx:id="btnSalvarEditarTarefa" layoutX="462.0" layoutY="475.0" mnemonicParsing="false" onAction="#salvarTarefa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #29abe2;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
+        <Button fx:id="btnSalvarEditarTarefa" layoutX="659.0" layoutY="467.0" mnemonicParsing="false" onAction="#salvarEdicaoListaTarefa" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <TextField fx:id="cadastrarTarefa" layoutX="242.0" layoutY="213.0" prefHeight="40.0" prefWidth="458.0" />
-        <TextField fx:id="cadastrarValorTarefa" layoutX="242.0" layoutY="318.0" prefHeight="40.0" prefWidth="458.0" />
-        <Button layoutX="163.0" layoutY="475.0" mnemonicParsing="false" onAction="#voltarTelaListaTarefa" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #29abe2;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+        <TextField fx:id="editarNomeTarefa" layoutX="242.0" layoutY="213.0" prefHeight="40.0" prefWidth="458.0" />
+        <TextField fx:id="editarValorTarefa" layoutX="242.0" layoutY="318.0" prefHeight="40.0" prefWidth="458.0" />
+        <Button fx:id="btnVoltarTelaListaTarefa" layoutX="172.0" layoutY="467.0" mnemonicParsing="false" onAction="#voltarTelaListaTarefa" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #124054; -fx-background-radius: 10;" text="Voltar" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
         </Button>
-      <Text fill="WHITE" layoutX="92.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alterar valor" textAlignment="CENTER">
+      <Text fontSmoothingType="LCD" layoutX="92.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alterar valor" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
-      <Text fill="WHITE" layoutX="81.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alterar tarefa" textAlignment="CENTER" wrappingWidth="139.298828125">
+      <Text fontSmoothingType="LCD" layoutX="81.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alterar tarefa" textAlignment="CENTER" wrappingWidth="139.298828125">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" proportional="false" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07058823853731155" green="0.250980406999588" blue="0.3294117748737335" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+
       </Text>
     </children>
 </AnchorPane>
